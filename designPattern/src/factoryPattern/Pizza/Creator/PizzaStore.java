@@ -6,11 +6,8 @@ public abstract class PizzaStore {
     
     public void order() {
         Pizza pizza;
-        pizza = createPizza();
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
-        pizza.box();
+       pizza = createPizza();
+       pizza.whatPizza();
     }
     
     public abstract Pizza createPizza();
