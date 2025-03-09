@@ -1,6 +1,6 @@
 package factoryPattern.Pizza.ConcreteCreator;
 
-import factoryPattern.Pizza.ConcreteProduct.ChicagoPizza;
+import factoryPattern.Pizza.ConcreteProduct.ChicagoPizza.ChicagoPizza;
 import factoryPattern.Pizza.Creator.PizzaStore;
 import factoryPattern.Pizza.Product.Pizza;
 
