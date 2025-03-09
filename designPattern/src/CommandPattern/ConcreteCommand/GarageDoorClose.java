@@ -10,7 +10,13 @@ public class GarageDoorClose implements Button {
         this.garageDoor = garageDoor;
     }
 
+    @Override
     public void execute() {
         garageDoor.down();
+    }
+
+    @Override
+    public void undo() {
+        garageDoor.up();
     }
 }

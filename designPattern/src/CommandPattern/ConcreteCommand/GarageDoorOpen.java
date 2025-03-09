@@ -14,4 +14,9 @@ public class GarageDoorOpen implements Button {
     public void execute() {
         garageDoor.up();
     }
+
+    @Override
+    public void undo() {
+        garageDoor.down();
+    }
 }

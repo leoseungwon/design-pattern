@@ -6,6 +6,7 @@ import CommandPattern.ConcreteCommand.NoButton;
 public class CommandController {
     Button[] onButtons;
     Button[] offButtons;
+    Button undoButtons;
 
     public CommandController() {
         onButtons = new Button[7];
@@ -16,6 +17,7 @@ public class CommandController {
             onButtons[i] = noButton;
             offButtons[i] = noButton;
         }
+        undoButtons = noButton;
     }
 
     public void setCommand(int slot, Button onButton, Button offButton) {
@@ -25,10 +27,16 @@ public class CommandController {
 
     public void onButtonWasPushed(int slot) {
         onButtons[slot].execute();
+        undoButtons = onButtons[slot];
     }
 
     public void offButtonWasPushed(int slot) {
         offButtons[slot].execute();
+        undoButtons = offButtons[slot];
+    }
+
+    public void undoButtonWasPushed() {
+        undoButtons.undo();
     }
 
     public String toString() {

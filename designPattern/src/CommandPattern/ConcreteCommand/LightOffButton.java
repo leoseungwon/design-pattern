@@ -14,4 +14,9 @@ public class LightOffButton implements Button {
     public void execute() {
         light.off();
     }
+
+    @Override
+    public void undo() {
+        light.on();
+    }
 }

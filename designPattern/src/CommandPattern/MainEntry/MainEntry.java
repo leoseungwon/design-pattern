@@ -2,16 +2,15 @@ package CommandPattern.MainEntry;
 
 import CommandPattern.Command.Button;
 import CommandPattern.ConcreteCommand.LightOnButton;
-import CommandPattern.Invoker.CommandController;
-import CommandPattern.Receiver.CeilingFan;
-import CommandPattern.Receiver.GarageDoor;
-import CommandPattern.Receiver.Light;
 import CommandPattern.ConcreteCommand.LightOffButton;
 import CommandPattern.ConcreteCommand.CeilingFanOnButton;
 import CommandPattern.ConcreteCommand.CeilingFanOffButton;
 import CommandPattern.ConcreteCommand.GarageDoorOpen;
 import CommandPattern.ConcreteCommand.GarageDoorClose;
-
+import CommandPattern.Receiver.CeilingFan;
+import CommandPattern.Receiver.GarageDoor;
+import CommandPattern.Receiver.Light;
+import CommandPattern.Invoker.CommandController;
 
 public class MainEntry {
     public static void main(String[] args) {
@@ -19,8 +18,6 @@ public class MainEntry {
         Light light = new Light();
         CeilingFan ceilingFan = new CeilingFan();
         GarageDoor garageDoor = new GarageDoor();
-
-       
 
         Button lightOn = new LightOnButton(light);
         Button lightOff = new LightOffButton(light);
@@ -38,15 +35,14 @@ public class MainEntry {
 
         commandController.onButtonWasPushed(0);
         commandController.offButtonWasPushed(0);
+        commandController.undoButtonWasPushed();
 
         commandController.onButtonWasPushed(1);
         commandController.offButtonWasPushed(1);
-
+        commandController.undoButtonWasPushed();
+        
         commandController.onButtonWasPushed(2);
         commandController.offButtonWasPushed(2);
-        
-        
-        
-        
+        commandController.undoButtonWasPushed();
     }
 }

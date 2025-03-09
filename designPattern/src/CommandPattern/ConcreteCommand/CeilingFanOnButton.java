@@ -14,4 +14,9 @@ public class CeilingFanOnButton implements Button {
     public void execute() {
         ceilingFan.on();
     }
+
+    @Override
+    public void undo() {
+        ceilingFan.off();
+    }
 }
