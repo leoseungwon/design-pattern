@@ -1,6 +1,13 @@
-package factoryPattern;
+package factoryPattern.Weapon.ConcreteCreator;
 
 import java.util.HashMap;
+
+import factoryPattern.Weapon.ItemData;
+import factoryPattern.Weapon.ConcreteProduct.Bow;
+import factoryPattern.Weapon.ConcreteProduct.Shield;
+import factoryPattern.Weapon.ConcreteProduct.Sword;
+import factoryPattern.Weapon.Creator.Factory;
+import factoryPattern.Weapon.Product.Item;
 
 public class ItemFactory extends Factory {
 

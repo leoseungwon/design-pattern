@@ -1,4 +1,6 @@
-package factoryPattern;
+package factoryPattern.Weapon.Creator;
+
+import factoryPattern.Weapon.Product.Item;
 
 public abstract class Factory {
     public Item create(String name) {

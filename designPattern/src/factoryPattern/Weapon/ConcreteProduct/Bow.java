@@ -1,4 +1,6 @@
-package factoryPattern;
+package factoryPattern.Weapon.ConcreteProduct;
+
+import factoryPattern.Weapon.Product.Item;
 
 public class Bow implements Item{
     @Override

@@ -1,4 +1,4 @@
-package factoryPattern;
+package factoryPattern.Weapon;
 
 public class ItemData {
     private int maxCount;
